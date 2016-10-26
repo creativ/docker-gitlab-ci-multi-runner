@@ -1,5 +1,5 @@
 GitlabCIMultiRunner:
-  image: creative/docker-gitlab-ci-multi-runner:1.4.1
+  image: creative/docker-gitlab-ci-multi-runner:1.7.1
   volumes:
     - /srv/docker/gitlab-runner:/home/gitlab_ci_multi_runner/data
   environment:

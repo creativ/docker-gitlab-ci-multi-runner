@@ -1,4 +1,4 @@
-# creative/docker-gitlab-ci-multi-runner:1.4.1
+# creative/docker-gitlab-ci-multi-runner:1.7.1
 
 *NOTE:* Initially was forked from [sameersbn/docker-gitlab-ci-multi-runner](https://github.com/sameersbn/docker-gitlab-ci-multi-runner) and separated to provide up-to-date Gitlab CI Multi Runner build.
 
@@ -51,7 +51,7 @@ Automated builds of the image are available on [Dockerhub](https://hub.docker.co
 > **Note**: Builds are also available on [Quay.io](https://quay.io/repository/creative/docker-gitlab-ci-multi-runner)
 
 ```bash
-docker pull creative/docker-gitlab-ci-multi-runner:1.4.1
+docker pull creative/docker-gitlab-ci-multi-runner:1.7.1
 ```
 
 Alternatively you can build the image yourself.
@@ -69,7 +69,7 @@ docker run --name gitlab-ci-multi-runner -d --restart=always \
   --volume /srv/docker/gitlab-runner:/home/gitlab_ci_multi_runner/data \
   --env='CI_SERVER_URL=http://git.example.com/ci' --env='RUNNER_TOKEN=xxxxxxxxx' \
   --env='RUNNER_DESCRIPTION=myrunner' --env='RUNNER_EXECUTOR=shell' \
-  creative/docker-gitlab-ci-multi-runner:1.4.1
+  creative/docker-gitlab-ci-multi-runner:1.7.1
 ```
 
 *Alternatively, you can use the sample [docker-compose.yml](docker-compose.yml) file to start the container using [Docker Compose](https://docs.docker.com/compose/)*
@@ -83,7 +83,7 @@ You can customize the launch command by specifying arguments to `gitlab-ci-multi
 ```bash
 docker run --name gitlab-ci-multi-runner -it --rm \
   --volume /srv/docker/gitlab-runner:/home/gitlab_ci_multi_runner/data \
-  creative/docker-gitlab-ci-multi-runner:1.4.1 --help
+  creative/docker-gitlab-ci-multi-runner:1.7.1 --help
 ```
 
 ## Persistence
@@ -131,7 +131,7 @@ To upgrade to newer releases:
   1. Download the updated Docker image:
 
   ```bash
-  docker pull creative/docker-gitlab-ci-multi-runner:1.4.1
+  docker pull creative/docker-gitlab-ci-multi-runner:1.7.1
   ```
 
   2. Stop the currently running image:
@@ -151,12 +151,12 @@ To upgrade to newer releases:
   ```bash
   docker run -name gitlab-ci-multi-runner -d \
     [OPTIONS] \
-    creative/docker-gitlab-ci-multi-runner:1.4.1
+    creative/docker-gitlab-ci-multi-runner:1.7.1
   ```
 
 ## Shell Access
 
-For debugging and maintenance purposes you may want access the containers shell. If you are using Docker version `1.4.1` or higher you can access a running containers shell by starting `bash` using `docker exec`:
+For debugging and maintenance purposes you may want access the containers shell. If you are using Docker version `1.7.1` or higher you can access a running containers shell by starting `bash` using `docker exec`:
 
 ```bash
 docker exec -it gitlab-ci-multi-runner bash
